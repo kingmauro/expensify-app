@@ -1,0 +1,51 @@
+{
+  "name": "expensify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config=jest.config.json",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-inline-react-svg": "^0.5.4",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "create-babelrc": "^0.1.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "3.0.1",
+    "jest": "^23.6.0",
+    "live-server": "^1.2.0",
+    "moments": "^0.0.2",
+    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
+    "raf": "3.3.2",
+    "react": "^16.4.1",
+    "react-addons-shallow-compare": "15.6.0",
+    "react-dates": "12.7.0",
+    "react-dom": "^16.4.1",
+    "react-modal": "^3.5.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.5.1",
+    "redux": "^4.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.4.0",
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

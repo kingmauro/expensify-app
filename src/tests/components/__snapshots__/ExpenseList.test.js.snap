@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseList with items 1`] = `
+<div>
+  <ExpenseListItem
+    amount={100}
+    createdAt={0}
+    description="Rent"
+    id={1}
+    key="1"
+    note=""
+  />
+  <ExpenseListItem
+    amount={200}
+    createdAt={-345600000}
+    description="Cable"
+    id={2}
+    key="2"
+    note=""
+  />
+  <ExpenseListItem
+    amount={300}
+    createdAt={345600000}
+    description="Internet"
+    id={3}
+    key="3"
+    note=""
+  />
+</div>
+`;
+
+exports[`should render ExpenseList with no items 1`] = `
+<div>
+  <p>
+    No expenses to show
+  </p>
+</div>
+`;
