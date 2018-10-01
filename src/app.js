@@ -7,6 +7,7 @@ import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import { removeExpense } from './actions/expenses';
 import getVisibleExpenses from './selectors/expenses';
+import './firebase/firebase';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
