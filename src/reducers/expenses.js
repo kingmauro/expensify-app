@@ -16,7 +16,11 @@ export default (state = expensesReducerDefaultState, action) => {
 				} else {
 					return expense;
 				}
-			})
+			});
+		case 'START_SET_EXPENSES':
+			console.log('iniciando set expenses');
+		case 'SET_EXPENSES':
+			return action.expenses;
 		default:
 			return state;
 			break;
