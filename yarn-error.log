@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add redux-mock.store
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add babael-polyfill
 
 PATH: 
-  /Users/maurobarrionuevo/.composer/vendor/bin:./node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/maurobarrionuevo/.rbenv/bin:/Users/maurobarrionuevo/.composer/vendor/bin:./node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.7.0
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/redux-mock.store: Not found
+  Error: https://registry.yarnpkg.com/babael-polyfill: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:65656:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:134675:22)
       at emitTwo (events.js:106:13)
@@ -33,7 +33,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "jest --config=jest.config.json",
+      "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
       "build:dev": "webpack",
       "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
@@ -54,6 +54,7 @@ npm manifest:
       "express": "^4.16.3",
       "extract-text-webpack-plugin": "^3.0.2",
       "firebase": "^5.5.1",
+      "history": "^4.7.2",
       "moments": "^0.0.2",
       "node-sass": "^4.9.2",
       "normalize.css": "^8.0.0",
@@ -67,6 +68,7 @@ npm manifest:
       "react-redux": "^5.0.7",
       "react-router-dom": "^4.3.1",
       "redux": "^4.0.0",
+      "redux-mock-store": "^1.5.3",
       "redux-thunk": "^2.3.0",
       "sass-loader": "^7.1.0",
       "style-loader": "^0.21.0",
@@ -75,6 +77,8 @@ npm manifest:
       "webpack": "3.1.0"
     },
     "devDependencies": {
+      "cross-env": "^5.2.0",
+      "dotenv": "^6.0.0",
       "enzyme": "3.0.0",
       "enzyme-adapter-react-16": "^1.5.0",
       "enzyme-to-json": "3.0.1",
@@ -1998,6 +2002,13 @@ Lockfile:
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
   
+  cross-env@^5.2.0:
+    version "5.2.0"
+    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.2.0.tgz#6ecd4c015d5773e614039ee529076669b9d126f2"
+    dependencies:
+      cross-spawn "^6.0.5"
+      is-windows "^1.0.0"
+  
   cross-spawn@^3.0.0:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-3.0.1.tgz#1256037ecb9f0c5f79e3d6ef135e30770184b982"
@@ -2010,6 +2021,16 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
     dependencies:
       lru-cache "^4.0.1"
+      shebang-command "^1.2.0"
+      which "^1.2.9"
+  
+  cross-spawn@^6.0.5:
+    version "6.0.5"
+    resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
+    dependencies:
+      nice-try "^1.0.4"
+      path-key "^2.0.1"
+      semver "^5.5.0"
       shebang-command "^1.2.0"
       which "^1.2.9"
   
@@ -2358,6 +2379,10 @@ Lockfile:
     dependencies:
       dom-serializer "0"
       domelementtype "1"
+  
+  dotenv@^6.0.0:
+    version "6.0.0"
+    resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.0.0.tgz#24e37c041741c5f4b25324958ebbc34bca965935"
   
   duplexify@^3.2.0:
     version "3.6.0"
@@ -3821,7 +3846,7 @@ Lockfile:
     version "0.2.1"
     resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   
-  is-windows@^1.0.2:
+  is-windows@^1.0.0, is-windows@^1.0.2:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
   
@@ -4864,6 +4889,10 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   
+  nice-try@^1.0.4:
+    version "1.0.5"
+    resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
+  
   node-fetch@^1.0.1:
     version "1.7.3"
     resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -5348,7 +5377,7 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/path-is-inside/-/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
   
-  path-key@^2.0.0:
+  path-key@^2.0.0, path-key@^2.0.1:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   
@@ -5901,6 +5930,12 @@ Lockfile:
     dependencies:
       indent-string "^2.1.0"
       strip-indent "^1.0.1"
+  
+  redux-mock-store@^1.5.3:
+    version "1.5.3"
+    resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.5.3.tgz#1f10528949b7ce8056c2532624f7cafa98576c6d"
+    dependencies:
+      lodash.isplainobject "^4.0.6"
   
   redux-thunk@^2.3.0:
     version "2.3.0"

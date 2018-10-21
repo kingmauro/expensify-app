@@ -1,0 +1,33 @@
+.primary-button{
+	background: $light-blue;
+	color:white;
+	padding: $s-size $l-size;
+	border-radius: 5px;
+	border:none;
+
+	&:hover{
+		background: lighten($light-blue, 20);
+	}
+
+	&:active{
+		background: darken($light-blue, 10);
+	}
+}
+
+.danger-button{
+	@extend .primary-button;
+	background: red;
+}
+
+.contrast-button{
+	background:none;
+	border-radius: 5px;
+	border: white 2px solid;
+	padding: 7px $l-size;
+	color:white;
+
+	&:hover{
+		border-color: darken(white, 10);
+		color: darken(white, 10)
+	}
+}

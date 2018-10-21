@@ -29,7 +29,11 @@ const renderApp = () => {
 	}
 };
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<div className="loading-container">
+					<div>
+						<img src="images/loader.gif" alt="" width="50"/>
+					</div>
+				</div>, document.getElementById('app'));
 
 
 

@@ -2,13 +2,32 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import getVisibleExpenses from '../selectors/expenses';
+import { Link } from 'react-router-dom';
 
 
 export const ExpenseList = (props) => (
-	<div>
+	<div className="container">
+		
+		{
+			props.expenses.length === 0 ? (
+				<p></p>
+			) : (
+				<div className="expense-list-header">
+					<div>Expense</div>
+					<div>Amount</div>
+				</div>
+			)
+
+		}
+
+		
+		
 	{
 		props.expenses.length === 0 ? (
-			<p>No expenses to show</p>
+			<div className="no-expenses form-error">
+				<span>No expenses to show. Lets add a new one!</span>
+				<Link className="primary-button" to="/create">Add Expense</Link>
+			</div>
 		) : (
 			props.expenses.map( (expense) => <ExpenseListItem key={expense.id} {...expense} /> )
 		)

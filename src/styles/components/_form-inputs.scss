@@ -1,0 +1,33 @@
+.form-container{
+	margin-top: $l-size;
+}
+
+.text-input{
+	height: 50px;
+	border: 1px solid #dcccca;
+	padding: $s-size;
+	width: 100%;
+}
+
+.select-input{
+	@extend .text-input;
+}
+
+.textarea-input{
+	@extend .text-input;
+	height: 100px;
+}
+
+.delete-section{
+	margin: $m-size;
+	display: flex;
+	justify-content:center;
+}
+
+.form-error{
+	background: #FF0046FF;
+	padding: $l-size;
+	border-radius: $s-size;
+	color:white;
+	margin-bottom: $m-size;
+}

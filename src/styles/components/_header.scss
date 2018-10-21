@@ -1,0 +1,26 @@
+.header{
+	background: $dark-blue;
+	padding: $m-size $l-size;
+
+	h1{
+		margin:0;
+		padding:0;
+	}
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
+
+	a:hover{
+		color: darken(white, 10);
+	}
+
+}
+
+.header-content{
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

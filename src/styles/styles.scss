@@ -1,2 +1,11 @@
 @import './base/settings';
 @import './base/base';
+@import './base/container.scss';
+@import './base/buttons.scss';
+
+@import './components/box-layout';
+@import './components/header';
+@import './components/page-header';
+@import './components/dashboard-filters';
+@import './components/form-inputs';
+@import './components/expense-list';

@@ -1,0 +1,37 @@
+.no-expenses{
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	
+	a{
+		text-decoration:none;
+	}
+}
+
+.expense-list-header{
+	margin-top: $l-size;
+	background-color: darken(white,10%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $l-size $m-size;
+	color: darken(white, 80%);
+}
+
+.expense-list-item{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	border-bottom: 1px solid lighten($dark-grey, 30%);
+	text-decoration: none;
+	color: $dark-grey;
+	padding: $l-size;
+	
+	&:hover{
+		color: lighten($dark-grey, 30%)
+	}
+
+	h3{
+		margin: 0;
+	}
+}
