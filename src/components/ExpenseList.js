@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 export const ExpenseList = (props) => (
-	<div className="container">
+	<div className="container item-list">
 		
 		{
 			props.expenses.length === 0 ? (

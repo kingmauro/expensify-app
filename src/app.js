@@ -4,14 +4,18 @@ import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter.js';
 import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
+import { startSetIncomes } from './actions/incomes';
 import { login, logout } from './actions/auth';
 import { removeExpense } from './actions/expenses';
+import { removeIncome } from './actions/incomes';
 import getVisibleExpenses from './selectors/expenses';
+import getVisibleIncomes from './selectors/incomes';
 import { firebase } from './firebase/firebase';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import 'react-tabs/style/react-tabs.css';
 
 const store = configureStore();
 
@@ -42,6 +46,12 @@ firebase.auth().onAuthStateChanged( (user) => {
 		store.dispatch(login(user.uid));
 		store.dispatch(startSetExpenses()).then(() => {
 			renderApp();
+			if(history.location.pathname === '/') {
+				history.push('/dashboard');
+			}
+		});
+		store.dispatch(startSetIncomes()).then(() => {
+			// renderApp();
 			if(history.location.pathname === '/') {
 				history.push('/dashboard');
 			}

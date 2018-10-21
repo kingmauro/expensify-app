@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import getVisibleExpenses from '../selectors/expenses';
-import getExpensesTotal from '../selectors/expensesTotal';
+import getVisibleIncomes from '../selectors/incomes';
+import getIncomesTotal from '../selectors/incomesTotal';
 import numeral from 'numeral';
 
-export class ExpensesSummary extends React.Component {
+export class IncomesSummary extends React.Component {
 
 	render(){
 		return (
@@ -17,7 +17,7 @@ export class ExpensesSummary extends React.Component {
 							<span> </span>
 							<Link className="primary-button" to="/createIncome">Add Income</Link>
 						</div>
-						<h1><span>{this.props.expenses.length}</span> gastos - Total: <span>{numeral(getExpensesTotal(this.props.expenses) / 100).format('$0,0.00')}</span></h1>
+						<h1><span>{this.props.incomes.length}</span> ingresos - Total: <span>{numeral(getIncomesTotal(this.props.incomes) / 100).format('$0,0.00')}</span></h1>
 					</div>
 				</div>
 			</div>
@@ -27,8 +27,8 @@ export class ExpensesSummary extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		expenses: getVisibleExpenses(state.expenses, state.filters)
+		incomes: getVisibleIncomes(state.incomes, state.filters)
 	}
 }
 
-export default connect(mapStateToProps)(ExpensesSummary);
+export default connect(mapStateToProps)(IncomesSummary);
