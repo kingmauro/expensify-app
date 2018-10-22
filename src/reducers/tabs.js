@@ -1,4 +1,4 @@
-const tabsReducerDefaultState = null; // Default State
+const tabsReducerDefaultState = 0; // Default State
 
 export default (state = tabsReducerDefaultState, action) => {
 	switch (action.type) {

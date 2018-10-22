@@ -18,7 +18,7 @@ export class AddIncomePage extends React.Component {
 					<div className="page-header">
 						<div className="container">
 							<div className="page-header-content">
-								<h1>Create Income</h1>
+								<h1>Añadir Ingreso</h1>
 							</div>
 						</div>
 					</div>

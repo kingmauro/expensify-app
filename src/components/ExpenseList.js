@@ -13,8 +13,8 @@ export const ExpenseList = (props) => (
 				<p></p>
 			) : (
 				<div className="expense-list-header">
-					<div>Expense</div>
-					<div>Amount</div>
+					<div>Gasto</div>
+					<div>Valor</div>
 				</div>
 			)
 

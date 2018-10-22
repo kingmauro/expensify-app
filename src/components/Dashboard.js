@@ -44,7 +44,6 @@ class ExpenseDashboardPage extends React.Component {
 				selectedTab: index
 			}
 		})
-		this.forceUpdate()
 	}
 
 
@@ -55,8 +54,8 @@ class ExpenseDashboardPage extends React.Component {
 			<div className="container">
 				<Tabs className="dashboard-tabs" selectedIndex={this.state.selectedTab} onSelect={this.onTabChange}>
 				    <TabList>
-				      <Tab>Expenses</Tab>
-				      <Tab>Incomes</Tab>
+				      <Tab>Gastos</Tab>
+				      <Tab>Ingresos</Tab>
 				    </TabList>
 				
 				    <TabPanel>

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { startEditIncome, startRemoveIncome} from '../actions/incomes';
 import IncomeForm from './IncomeForm';
 import { history } from '../routers/AppRouter.js';
-import { setTab } from '../actions/tabs';
 
 export class EditIncomePage extends React.Component {
 
@@ -24,7 +23,7 @@ export class EditIncomePage extends React.Component {
 				<div className="page-header">
 					<div className="container">
 						<div className="page-header-content">
-							<h1>Edit Income</h1>
+							<h1>Editar</h1>
 						</div>
 					</div>
 				</div>

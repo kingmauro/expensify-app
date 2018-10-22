@@ -13,9 +13,9 @@ export class ExpensesSummary extends React.Component {
 				<div className="container">
 					<div className="page-header-content">
 						<div>
-							<Link className="primary-button" to="/create">Add Expense</Link>
+							<Link className="primary-button" to="/create">Nuevo Gasto</Link>
 							<span> </span>
-							<Link className="primary-button" to="/createIncome">Add Income</Link>
+							<Link className="primary-button" to="/createIncome">Nuevo Ingreso</Link>
 						</div>
 						<h1><span>{this.props.expenses.length}</span> gastos - Total: <span>{numeral(getExpensesTotal(this.props.expenses) / 100).format('$0,0.00')}</span></h1>
 					</div>

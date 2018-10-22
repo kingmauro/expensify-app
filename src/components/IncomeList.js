@@ -13,8 +13,8 @@ export const IncomeList = (props) => (
 				<p></p>
 			) : (
 				<div className="expense-list-header">
-					<div>Incomes</div>
-					<div>Amount</div>
+					<div>Ingreso</div>
+					<div>Valor</div>
 				</div>
 			)
 

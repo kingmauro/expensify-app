@@ -45,7 +45,7 @@ export default class IncomeForm extends React.Component {
 
 		if (!this.state.description || !this.state.amount) {
 			this.setState( () => ({
-				error: "Insert Amount and Description"
+				error: "Ingrese descripción y valor"
 			}));
 		} else {
 			this.setState( () => ({
@@ -68,7 +68,7 @@ export default class IncomeForm extends React.Component {
 					<input
 						className="text-input" 
 						type="text"
-						placeholder="Description"
+						placeholder="Descripción"
 						autoFocus
 						value={this.state.description}
 						onChange={this.onDescriptionChange}
@@ -77,7 +77,7 @@ export default class IncomeForm extends React.Component {
 					<input
 						className="text-input" 
 						type="text"
-						placeholder="Amount"
+						placeholder="Valor"
 						value={this.state.amount}
 						onChange={this.onAmountChange}
 					/>
@@ -93,12 +93,12 @@ export default class IncomeForm extends React.Component {
 					<br/><br/>
 					<textarea
 						className="textarea-input"
-						placeholder="Notes for income"
+						placeholder="Notas y recordatorios"
 						value={this.state.note}
 						onChange={this.onNoteChange}
 					></textarea> 
 					<br/><br/>
-					<button className="primary-button">Go on!</button>
+					<button className="primary-button">Añadir</button>
 				</form>
 			</div>
 		)
