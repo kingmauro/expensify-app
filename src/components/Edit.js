@@ -18,7 +18,6 @@ export class EditExpensePage extends React.Component {
 	render(){
 		return (
 			<div>
-			
 				<div className="page-header">
 					<div className="container">
 						<div className="page-header-content">

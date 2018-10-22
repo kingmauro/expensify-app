@@ -2,12 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startEditIncome, startRemoveIncome} from '../actions/incomes';
 import IncomeForm from './IncomeForm';
+import { history } from '../routers/AppRouter.js';
+import { setTab } from '../actions/tabs';
 
 export class EditIncomePage extends React.Component {
 
 	onSubmit = (income) => {
 		this.props.startEditIncome(this.props.income.id, income);
 		this.props.history.push('/');
+		
 	}
 
 	onRemove = () => {
@@ -18,7 +21,6 @@ export class EditIncomePage extends React.Component {
 	render(){
 		return (
 			<div>
-			
 				<div className="page-header">
 					<div className="container">
 						<div className="page-header-content">
@@ -42,7 +44,7 @@ export class EditIncomePage extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		income: state.incomes.find((income) => income.id === props.match.params.id)
+		income: state.incomes.find((income) => income.id === props.match.params.id),
 	}
 }
 
