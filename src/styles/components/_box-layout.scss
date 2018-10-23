@@ -14,9 +14,15 @@
 	text-align: center;
 	width: 25rem;
 	padding: $l-size $m-size; 
+
+	button{
+		width: 80%;
+		margin-top:10px;
+	}
 }
 
 .box-layout__title{
 	margin: 0 0 $m-size 0;
 	line-height: 1;
 }
+
