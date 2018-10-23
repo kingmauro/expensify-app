@@ -34,10 +34,10 @@ const renderApp = () => {
 };
 
 ReactDOM.render(<div className="loading-container">
-					<div>
-						<img src="images/loader.gif" alt="" width="50"/>
-					</div>
-				</div>, document.getElementById('app'));
+	<div>
+		<img src="images/loader.gif" alt="" width="50"/>
+	</div>
+</div>, document.getElementById('app'));
 
 
 
