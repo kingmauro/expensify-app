@@ -25,8 +25,8 @@ export const IncomeList = (props) => (
 	{
 		props.incomes.length === 0 ? (
 			<div className="no-expenses form-error">
-				<span>No incomes to show. Lets add a new one!</span>
-				<Link className="primary-button" to="/createIncome">Add Incomes</Link>
+				<span>No hay ingresos para mostrar.</span>
+				<Link className="primary-button" to="/createIncome">Nuevo Ingreso</Link>
 			</div>
 		) : (
 			props.incomes.map( (income) => <IncomeListItem key={income.id} {...income} /> )

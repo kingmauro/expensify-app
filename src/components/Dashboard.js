@@ -6,7 +6,6 @@ import ExpensesSummary from './ExpensesSummary';
 import IncomesSummary from './IncomesSummary';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { history } from '../routers/AppRouter.js';
 import { connect } from 'react-redux';
 import { setTab } from '../actions/tabs';
 
@@ -20,22 +19,13 @@ class ExpenseDashboardPage extends React.Component {
 		this.onTabChange = this.onTabChange.bind(this)
 	}
 
-	componentDidUpdate(){
-		console.log('mounted')
-		console.log('estado actual de state redux', this.props.tabs)
-		console.log('estado actual de state local', this.state.selectedTab)
+	componentDidMount(){
 		this.setState( () => {
 			return {
 				selectedTab: this.props.tabs
 			}
 		})
-	}
-
-	componentDidUpdate(){
-		console.log('updated')
-		console.log('estado actual de state redux', this.props.tabs)
-		console.log('estado actual de state local', this.state.selectedTab)
-	}
+	}	
 
 	onTabChange(index){
 		this.props.setTab(index);
